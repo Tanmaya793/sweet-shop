@@ -3,10 +3,10 @@ import { CartContext } from "../context/CartContext";
 
 function Payment() {
   const [showPassword, setShowPassword] = React.useState(false);
-  const [password, setPassword] = React.useState("");
+  //const [password, setPassword] = React.useState("");
   const [enteredPassword, setEnteredPassword] = React.useState("");
   const correctPassword = "1234"; // Demo password
-  const [method, setMethod] = React.useState("");
+  //const [method, setMethod] = React.useState("");
   const [card, setCard] = React.useState({ number: "", name: "", expiry: "", cvv: "" });
   const [upi, setUpi] = React.useState("");
   const { cartItems } = useContext(CartContext);
@@ -14,7 +14,7 @@ function Payment() {
 
   // Calculate total amount from cart
   const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
-  const name = card.name || upi || "Customer Name";
+  //const name = card.name || upi || "Customer Name";
 
   // Cart breakdown for display
   const cartBreakdown = cartItems.length > 0 ? (
