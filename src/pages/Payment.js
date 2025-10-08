@@ -7,10 +7,15 @@ function Payment() {
   const [enteredPassword, setEnteredPassword] = React.useState("");
   const correctPassword = "1234"; // Demo password
   //const [method, setMethod] = React.useState("");
-  //const [card, setCard] = React.useState({ number: "", name: "", expiry: "", cvv: "" });
-  //const [upi, setUpi] = React.useState("");
+  const [card, setCard] = React.useState({ number: "", name: "", expiry: "", cvv: "" });
+  const [upi, setUpi] = React.useState("");
   const { cartItems } = useContext(CartContext);
   const [username, setUsername] = React.useState("");
+
+  React.useEffect(() => {
+  setCard(prev => prev); 
+  setUpi(upi);  
+}, []);
 
   // Calculate total amount from cart
   const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
