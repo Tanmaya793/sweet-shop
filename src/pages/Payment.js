@@ -14,7 +14,7 @@ function Payment() {
 
   React.useEffect(() => {
   setCard(prev => prev); 
-  setUpi(upi);  
+  setUpi(upi => upi);  
 }, [setCard, setUpi]);
 
   // Calculate total amount from cart
